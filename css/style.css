@@ -1,0 +1,95 @@
+
+/*  General Styling */
+
+* , *::after , *::before{
+    box-sizing: border-box;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    color: inherit;
+}
+
+:root{
+    --main-dark-color:#101214;
+    --secondary-dark-color:#161a1d;
+    --tertiary-dark-color:#333;
+}
+body{
+    font-family: "Lora", serif;
+    background-color: var(--main-dark-color);
+    color:#f1f1f1;
+
+}
+
+
+div.form-floating textarea.form-control{
+    resize: none;
+    height: 100px;
+}
+
+
+
+.form-control{
+    background-color:var(--tertiary-dark-color);
+    border: none;
+    color: #f1f1f1;
+    font-family: var(--bs-font-sans-serif);
+}
+form label{
+    font-family: var(--bs-font-sans-serif);
+ 
+}
+
+.form-control:focus {
+    color: #f1f1f1;
+    background-color: var(--tertiary-dark-color);
+    border-color:#f1f1f1;
+    outline: 0;
+    box-shadow:none;
+}
+
+
+
+.form-floating>label{
+    top: -10px;
+    color:#f1f1f1;
+    font-weight: 700;
+}
+.form-floating > .form-control:focus ~ label{
+    color: #f1f1f1;
+}
+
+.form-floating > .form-control:focus ~ label::after{
+    background-color: transparent;
+    
+}
+
+
+
+input[type="search"]::placeholder{
+    color: white;
+    
+}
+
+.inner-card{
+    background-color: var(--tertiary-dark-color);
+ transition: box-shadow 350ms;
+}
+
+.inner-card:hover{
+    box-shadow: 0px 0px 6px white;
+}
+
+
+
+img{
+    height: 150px;
+    object-fit: contain;
+    transition: transform 350ms;
+}
+

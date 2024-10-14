@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Product Managment System</title>
+
+<!--  Lora Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <!--  Font Awesome 6 Library -->
+<link rel="stylesheet" href="./css/all.min.css">
+<!--  Bootstrap version 5.3 Frame Work -->
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<!--  My style Sheet CSS File -->
+<link rel="stylesheet" href="./css/style.css">
+<!--  My Style Query Sheet -->
+<link rel="stylesheet" href="./css/media.css">
+</head>
+<body>
+
+<main>
+<div class="container">
+  <section class="m-4">
+    <div class="container">
+      <h1 class="text-capitalize text-center h2">product Managment system </h1>
+
+<form class="mt-4" id="form">
+  <div class="form-floating">
+    <input oninput="validationOfInputs(nameInputRegx , nameInput)"  autocomplete="off" type="text" class="form-control" id="name" placeholder="name@example.com" name="product-name">
+    <label for="name">Name</label>
+<p class="error fs-6 text-warning text-capitalize d-none">name must start with upper case and not less than 3 character</p>
+  </div>
+
+  <div class="form-floating mt-5">
+    <input oninput="validationOfInputs(cateogoryInputRegx , cateogoryInput)"  autocomplete="off" type="text" class="form-control" id="category" placeholder="Category" name="product-category" list="catlist">
+    <label for="category">Category</label>
+    <p class="error fs-6 text-warning text-capitalize d-none">name must start with upper case and not less than 3 character</p>
+
+
+<datalist id="catlist">
+<option value="Laptob">Laptob</option>
+<option value="Mobile">Mobile</option>
+<option value="Screnn">Screnn</option>
+<option value="Camera">Camera</option>
+<option value="Clothes">Clothes</option>
+<option value="Tshirt">Tshirt</option>
+<option value="Ipad">Ipad</option>
+</datalist>
+  </div>
+
+
+  <div class="form-floating mt-5">
+    <input oninput="validationOfInputs(priceInputRegx , priceInput)"  autocomplete="off" type="number" class="form-control" id="price" placeholder="name@example.com" name="product-price">
+    <label for="price">Price</label>
+    <p class="error fs-6 text-warning text-capitalize d-none">number not less than 2 digits and not start with zero</p>
+
+  </div>
+
+
+
+  <div class="form-floating mt-5">
+    <textarea oninput="validationOfInputs(descriptionInputRegx , descriptionInput)" autocomplete="off" class="form-control" id="description" placeholder="name@example.com" name="product-description"></textarea>
+    <label for="description">Description</label>
+    <p class="error fs-6 text-warning text-capitalize d-none">name must start with uppercase letter then not less than 5 letters</p>
+
+  </div>
+
+
+
+  <div class="my-5">
+    <input onchange="validationInputFile(imageInput)" type="file" class="form-control" id="imageInput" accept="image/*"  name="product-file">
+  </div>
+
+<div class="btn-box d-flex align-items-center mb-5 gap-3">
+  <button onclick="getData()" id="addBtn" class="btn btn-primary" >Add Product</button>
+  <button onclick="updatData(updatedIndex)" id="updatBtn" class="btn btn-danger d-none" >Add Product</button>
+
+</div>
+
+</form>
+<input oninput="serchProducts()" id="inputSearch" type="search"  placeholder="Search..." class="form-control shadow-none w-75 mx-auto text-white">
+
+<div class="row mt-5 g-3" id="my-row">
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </section>
+</div>
+</main>
+    <!--  BootStrap JS Bundle File -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!--  My Main JS File -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
